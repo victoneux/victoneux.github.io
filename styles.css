@@ -1,0 +1,109 @@
+body {
+    background-color: #302d41;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: 'Share Tech Mono', monospace;
+    color: #988BA2;
+}
+.container {
+    max-width: 1050px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 15px;
+    margin-bottom: 100;
+}
+#footer {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding-left: 5vw;
+    width: 100vw;
+    height: 5vh;
+    left: 0;
+    bottom: 0;
+    background-color: #1E1E2E;
+}
+.info, .projects {
+    width: 450px;
+    margin-left: 20;
+    margin-right: 20;
+}
+
+#name_title {
+    display: flex;
+    flex-flow: row;
+    height: 85px;
+}
+#name_title_text {
+    display: flex;
+    flex-flow: column;
+    justify-content: top;
+}
+p, h1 {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+p, a {
+    font-size: 20;
+}
+a {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    color: #C9CBFF;
+}
+h1 {
+    font-size: 25;
+    color: #F28FAD;
+}
+#games_title, #interests_title {
+    color: #F28FAD;
+}
+#name_title_text h1, #projects_title h1 {
+    font-size: 200%;
+    color: #C3BAC6;
+}
+#pfp_image {
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+#name_title, #about, #skills, #links, #games, #projects_title {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+#dotfiles, #polbot2 {
+    position: relative;
+    background: #1E1E2E;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+#btw {
+    font-size: 7;
+    position: absolute;
+    top: 40px;
+}
+
+#dotfiles_title, .dotfiles_icons {
+    color: #DDB6F2;
+}
+#polbot2_title, .polbot2_icons {
+    color: #F5C2E7;
+}
+
+.info_icons {
+    color: #DDB6F2
+}
+
+@media only screen and (max-width: 1050px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
