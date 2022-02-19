@@ -97,12 +97,12 @@ h1 {
     color: #F5C2E7;
 }
 .dotfiles_icons, .polbot2_icons {
-    font-family: 'NerdFontsSymbols Nerd Font';
+    font-family: 'Fira Sans';
 }
 
 .info_icons {
     color: #DDB6F2;
-    font-family: 'NerdFontsSymbols Nerd Font';
+    font-family: 'Fira Sans';
 }
 
 @media only screen and (max-width: 1050px) {
