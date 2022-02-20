@@ -112,6 +112,7 @@ h1 {
     }
     #footer {
         padding-left: 0;
+        justify-content: center;
     }
     #footer p {
         text-align: center;
