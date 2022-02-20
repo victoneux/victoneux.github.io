@@ -110,4 +110,8 @@ h1 {
         flex-direction: column;
         align-items: center;
     }
+    #booter {
+        padding-left: 0;
+        justify-content: center;
+    }
 }
