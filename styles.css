@@ -16,6 +16,7 @@ body {
     gap: 15px;
     margin-bottom: 100;
 }
+
 #footer {
     position: fixed;
     display: flex;
