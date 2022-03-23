@@ -60,7 +60,7 @@ h1 {
     font-size: 25;
     color: #F28FAD;
 }
-#games_title, #interests_title {
+.subtitle {
     color: #F28FAD;
 }
 #name_title_text h1, #projects_title h1 {
@@ -72,7 +72,7 @@ h1 {
     margin-right: 20px;
 }
 
-#name_title, #about, #skills, #links, #games, #projects_title {
+#name_title, #about, #skills, #links, #sub, #projects_title {
     margin-bottom: 30px;
     margin-top: 30px;
 }
