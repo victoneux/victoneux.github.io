@@ -1,12 +1,12 @@
 body {
-    background-color: #302d41;
+    background-color: #303446;
     margin: 0;
     min-height: 100vh;
     display: flex;
     flex-flow: column;
     align-items: center;
     font-family: 'Share Tech Mono', monospace;
-    color: #988BA2;
+    color: #c6d0f5;
 }
 .container {
     max-width: 1050px;
@@ -26,7 +26,7 @@ body {
     height: 5vh;
     left: 0;
     bottom: 0;
-    background-color: #1E1E2E;
+    background-color: #232634;
 }
 .info, .projects {
     width: 450px;
@@ -54,18 +54,18 @@ p, a {
 a {
     text-decoration: underline;
     text-decoration-style: dashed;
-    color: #C9CBFF;
+    color: #f2d5cf;
 }
 h1 {
     font-size: 25;
-    color: #F28FAD;
+    color: #b5bfe2;
 }
 .subtitle {
-    color: #F28FAD;
+    color: #ef9f76;
 }
 #name_title_text h1, #projects_title h1 {
     font-size: 200%;
-    color: #C3BAC6;
+    color: #a5adce;
 }
 #pfp_image {
     border-radius: 20px;
@@ -79,7 +79,7 @@ h1 {
 
 #project1 {
     position: relative;
-    background: #1E1E2E;
+    background: #292c3c;
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 30px;
