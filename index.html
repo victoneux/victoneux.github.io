@@ -6,8 +6,25 @@
     <script src="https://kit.fontawesome.com/05be29d559.js" crossorigin="anonymous"></script>
     <meta name="google-site-verification" content="YwQ5PAt5kHxUI9kBzL0ZRtGHrbiMrGH6t6T9PUTVZuI" />
     <title>victoneux</title>
+
+    <script>
+        function calculate_age() {
+            var currentDate = new Date("May 24, 2023");
+            var birthDate = new Date("May 24, 2005");
+
+            age = currentDate.getFullYear() - birthDate.getFullYear();
+            var m = currentDate.getMonth() - birthDate.getMonth();
+            var d = currentDate.getDate() - birthDate.getDate();
+            if (m < 0 || d < 0) {
+                age--;
+            }
+
+            document.getElementById('age').innerHTML = document.getElementById('age').innerHTML + Math.floor(age);
+        }
+    </script>
 </head>
 <body>
+    <script>calculate_age()</script>
     <div class="container">
         <section class="info">
             <section id="name_title">
@@ -21,7 +38,7 @@
                 <h1><i class="fa-solid fa-caret-right"></i>about me</h1>
                 <p><i class="fa-solid fa-circle-info info_icons"></i> high school & college student with passions for computer science and aerospace engineering</p>
                 <p><i class="fa-solid fa-location-pin info_icons"></i> denver</p>
-                <p><i class="fa-solid fa-calendar info_icons"></i> 17</p>
+                <p id="age"><i class="fa-solid fa-calendar info_icons"></i> </p>
             </section>
             <section id="skills">
                 <h1><i class="fa-solid fa-caret-right"></i>skills</h1>
