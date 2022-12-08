@@ -15,7 +15,7 @@
             var age = currentDate.getFullYear() - birthDate.getFullYear();
             var m = currentDate.getMonth() - birthDate.getMonth();
             var d = currentDate.getDate() - birthDate.getDate();
-            if (m < 0 || d < 0) {
+            if (m < 0 || (m == 0 && d < 0)) {
                 age--;
             }
 
