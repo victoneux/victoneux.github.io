@@ -37,12 +37,15 @@ body {
 #name_title {
     display: flex;
     flex-flow: row;
-    height: 85px;
+    align-items: center;
+}
+#name_title p {
+    display: block;
 }
 #name_title_text {
     display: flex;
     flex-flow: column;
-    justify-content: top;
+    justify-content: center;
 }
 p, h1 {
     margin-top: 1px;
@@ -70,6 +73,7 @@ h1 {
 #pfp_image {
     border-radius: 20px;
     margin-right: 20px;
+    height: 90px;
 }
 
 #name_title, #about, #skills, #links, #sub, #projects_title {
