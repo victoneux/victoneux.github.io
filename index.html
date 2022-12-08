@@ -9,7 +9,7 @@
 
     <script>
         function calculate_age() {
-            var currentDate = new Date("May 24, 2023");
+            var currentDate = new Date();
             var birthDate = new Date("May 24, 2005");
 
             age = currentDate.getFullYear() - birthDate.getFullYear();
@@ -24,7 +24,6 @@
     </script>
 </head>
 <body>
-    <script>calculate_age()</script>
     <div class="container">
         <section class="info">
             <section id="name_title">
@@ -38,7 +37,7 @@
                 <h1><i class="fa-solid fa-caret-right"></i>about me</h1>
                 <p><i class="fa-solid fa-circle-info info_icons"></i> high school & college student with passions for computer science and aerospace engineering</p>
                 <p><i class="fa-solid fa-location-pin info_icons"></i> denver</p>
-                <p id="age"><i class="fa-solid fa-calendar info_icons"></i> </p>
+                <p id="age"><i class="fa-solid fa-calendar info_icons"></i> </p><script>calculate_age()</script>
             </section>
             <section id="skills">
                 <h1><i class="fa-solid fa-caret-right"></i>skills</h1>
