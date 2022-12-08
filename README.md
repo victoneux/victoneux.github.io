@@ -1,2 +1,2 @@
 # victoneux.github.io
-A repository for a person - cool, no?
+a very spooky, cool repository
