@@ -81,7 +81,7 @@ h1 {
     margin-top: 30px;
 }
 
-#project1 {
+.project_item {
     position: relative;
     background: #292c3c;
     padding: 20px;
@@ -94,9 +94,13 @@ h1 {
     color: #DDB6F2;
 }
 #project2_title, .project2_icons {
-    color: #F5C2E7;
+    color: #85c1dc;
 }
-.project1_icons, .project2_icons {
+#project3_title, .project3_icons {
+    color: #e5c890;
+}
+
+.project_icons {
     font-family: 'Fira Sans';
 }
 
