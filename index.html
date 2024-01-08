@@ -1,98 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
-    <script src="https://kit.fontawesome.com/05be29d559.js" crossorigin="anonymous"></script>
-    <meta name="google-site-verification" content="YwQ5PAt5kHxUI9kBzL0ZRtGHrbiMrGH6t6T9PUTVZuI" />
-    <title>victoneux</title>
-    <!-- Finally updated -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/05be29d559.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <title>victoneux</title>
 
-    <script>
-        function calculate_age() {
-            var currentDate = new Date();
-            var birthDate = new Date("May 24, 2005");
+  <script>
+    function calculate_age() {
+      var currentDate = new Date();
+      var birthDate = new Date("May 24, 2005");
 
-            var age = currentDate.getFullYear() - birthDate.getFullYear();
-            var m = currentDate.getMonth() - birthDate.getMonth();
-            var d = currentDate.getDate() - birthDate.getDate();
-            if (m < 0 || (m == 0 && d < 0)) {
-                age--;
-            }
+      var age = currentDate.getFullYear() - birthDate.getFullYear();
+      var m = currentDate.getMonth() - birthDate.getMonth();
+      var d = currentDate.getDate() - birthDate.getDate();
+      if (m < 0 || (m == 0 && d < 0)) {
+        age--;
+      }
 
-            document.getElementById('age').innerHTML = document.getElementById('age').innerHTML + Math.floor(age);
-        }
-    </script>
+      document.getElementById('age').innerHTML = document.getElementById('age').innerHTML + Math.floor(age);
+    }
+  </script>
 </head>
-<body>
+  <body>
     <div class="container">
-        <section class="info">
-            <section id="name_title">
-                <img src="https://i.imgur.com/4fWLwTT.png" id="pfp_image" height=100% width=height>
-                <section id="name_title_text">
-                    <h1>victoneux</h1>
-                    <p>a random internet boyo</p>
-                </section>
-            </section>
-            <section id="about">
-                <h1><i class="fa-solid fa-caret-right"></i>about me</h1>
-                <p><i class="fa-solid fa-circle-info info_icons"></i> college student with passions for space, coding, history, and engineering</p>
-                <p><i class="fa-solid fa-location-pin info_icons"></i> denver</p>
-                <p><i class="fa-solid fa-atom info_icons"></i> intp-t</p>
-                <p id="age"><i class="fa-solid fa-calendar info_icons"></i> </p><script>calculate_age()</script>
-            </section>
-            <section id="skills">
-                <h1><i class="fa-solid fa-caret-right"></i>hobbies</h1>
-                <p><i class="fa-solid fa-code info_icons"></i> programming</p>
-                <p><i class="fa-solid fa-gear info_icons"></i> engineering</p>
-                <p><i class="fa-solid fa-gamepad info_icons"></i> gaming</p>
-            </section>
-            <section id="links">
-                <h1><i class="fa-solid fa-caret-right"></i>links</h1>
-                <i class="fab fa-github info_icons"></i> <a href="https://github.com/victoneux">victoneux</a><br/>
-                <i class="fab fa-discord info_icons"></i> <a href="https://discord.com/users/742193269655601272">victoneux</a><br/>
-                <i class="fab fa-telegram info_icons"></i> <a href="https://telegram.me/victoneux">victoneux</a><br/>
-                <i class="fa-solid fa-envelope info_icons"></i> <a href="mailto:boi@victoneux.gay">boi@victoneux.gay</a><br/>
-                <i class="fa-brands fa-steam info_icons"></i> <a href="https://steamcommunity.com/id/victoneux/">victoneux</a>
-            </section>
-            <section id="sub">
-                <p class="subtitle">games</p>
-                <p>kerbal space program, stellaris, hearts of iron, microsoft flight sim, dungeons & dragons</p>
-                <p class="subtitle">other info</p>
-                <p>i really like spaghetti i guess</p>
-            </section>
-        </section>
+      <div id="personal_info" class="sub_container">
+        <div id="name_badge">
+          <img src="https://i.imgur.com/4fWLwTT.png" id="pfp_image" height=100% width=height>
+          <section id="name_title_text">
+            <h1>victoneux</h1>
+            <p id="name_subtext">a random internet boyo</p>
+          </section>
+        </div>
 
-        <section class="projects">
-            <section id="projects_title">
-                <h1 align="center">projects</h1>
-                <p align="center">stuff that i sometimes work on</p>
-            </section>
-            
-            <section id="project1" class="project_item">
-                <p id="project1_title">polbot</p>
-                <p>generates maps and manages sociopolitical data for fictional worlds for discord roleplaying games</p>
-                <p><i class="fa-solid fa-wrench project1_icons project_icons"></i> discord.py, numpy</p>
-                <i class="fab fa-github project1_icons project_icons"></i> <a href="https://github.com/victoneux/polbot">victoneux/polbot</a>
-            </section>
+        <div id="general_info" class="personal_info_container">
+          <p><i class="fa-solid fa-location-pin info_icons"></i> daytona beach, fl</p>
+          <p><i class="fa-solid fa-palette info_icons"></i> intp-t</p>
+          <p id="age"><i class="fa-solid fa-calendar info_icons"></i> </p><script>calculate_age()</script>
+        </div>
 
-            <section id="project2" class="project_item">
-                <p id="project2_title">dotfiles</p>
-                <p>custom linux desktop environment that i've spent far too much of my life on</p>
-                <p><i class="fa-solid fa-wrench project2_icons project_icons"></i> hyprland, eww, bash</p>
-                <i class="fab fa-github project2_icons project_icons"></i> <a href="https://github.com/victoneux/dotfiles">victoneux/dotfiles</a>
-            </section>
-
-            <section id="project3" class="project_item">
-                <p id="project3_title">website</p>
-                <p>what you're looking at right now. i needed to fill room</p>
-                <p><i class="fa-solid fa-wrench project3_icons project_icons"></i> html/css, javascript</p>
-                <i class="fab fa-github project3_icons project_icons"></i> <a href="https://github.com/victoneux/victoneux.github.io">victoneux/victoneux.github.io</a>
-            </section>
-        </section>
+        <div id="description" class="personal_info_container">
+          <p>
+            hey there!
+            <br><br>
+            i'm a random internet boyo with passions for rocketry, space, computers, photography and some other nerd stuff, i guess.
+            <br><br>
+            yeah i'll put something more here eventually i'm gonna go back to coding the right side of the website
+          </p>
+        </div>
+      </div>
+      <div id="content" class="sub_container">
+        owo? owo! (something more goes here i promise)
+      </div>
     </div>
-
-    <div id="footer">
-        <p>victoneux, 2023. hand-written with html/css, made with the <a href="https://github.com/catppuccin/catppuccin">catppuccin</a> theme and <i class="fa-solid fa-heart"></i></p>
-    </div>
-</body>
+  </body>
+</html>
