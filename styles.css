@@ -118,3 +118,24 @@ body {
         width: 100%;
     }
 }
+
+#links {
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+}
+
+#links_icons {
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+}
+
+#links_icons a {
+    color: var(--green);
+    font-size: 120%;
+}
+
+#links_icons a:hover {
+    color: var(--flamingo);
+}
