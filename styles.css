@@ -111,5 +111,10 @@ body {
     .container {
         flex-direction: column;
         justify-content: start;
+        width: 80%;
+        left: 10%;
+    }
+    .sub_container {
+        width: 100%;
     }
 }
