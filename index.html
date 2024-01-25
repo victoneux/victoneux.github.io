@@ -57,7 +57,7 @@
       let object = document.getElementById(object_id);
       let length = new_text.length;
 
-      let chars = ["%", "#", "@"];
+      let chars = ["!", "@", "#", "$", "%", "^", "&", "*"];
       if (i === 0) {
         object.innerHTML = '#'.repeat(length);
       }
@@ -84,6 +84,20 @@
       }, 30);
     }
 
+    function description_cycle(pick) {
+      let descriptions = ["a random internet boyo", "software developer", "engineer", "perpetual procrastinator"]
+      setTimeout(function() {
+        fancy_text('name_subtext', descriptions[pick], 0);
+
+        let n = pick + 1;
+        if (n > descriptions.length - 1) {
+          n = 0;
+        }
+
+        description_cycle(n);
+      }, 2000);
+    }
+
     function random_range(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
@@ -97,6 +111,7 @@
           <section id="name_title_text">
             <h1>victoneux</h1>
             <p id="name_subtext">a random internet boyo</p>
+            <script>description_cycle(1)</script>
           </section>
         </div>
 
