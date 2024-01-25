@@ -52,11 +52,9 @@ body {
 }
 
 .container {
-    width: 60%;
     height: 100%;
     position: absolute;
     top: 0;
-    left: 20%;
     background-color: transparent;
     justify-content: space-evenly;
     display: flex;
@@ -107,10 +105,14 @@ body {
     font-size: 200%;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
     .container {
-        width: 80%;
-        left: 10%;
+        position: relative;
+        width: 1000px;
     }
 }
 
@@ -118,6 +120,8 @@ body {
     .container {
         flex-direction: column;
         justify-content: start;
+        width: 80%;
+        left: 10%;
     }
     .sub_container {
         width: 100%;
