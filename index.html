@@ -25,6 +25,32 @@
 
       document.getElementById('age').innerHTML = document.getElementById('age').innerHTML + Math.floor(age);
     }
+
+    function cycle_content(direction) {
+      let options = ['photography', 'projects'];
+      let new_id = localStorage.content_id;
+      if (direction === 0) {
+        new_id--;
+      } else {
+        new_id++;
+      }
+      if (new_id >= options.length) {
+        new_id = 0;
+      }
+      if (new_id < 0) {
+        new_id = options.length - 1;
+      }
+      localStorage.content_id = new_id;
+      document.getElementById('content_title').innerHTML = options[new_id];
+
+      for (let i = 0; i < options.length; i++) {
+        if (i !== new_id) {
+          document.getElementById(options[i]).style.display = 'none';
+        } else {
+          document.getElementById(options[new_id]).style.display = 'initial';
+        }
+      }
+    }
   </script>
 </head>
   <body>
@@ -67,18 +93,23 @@
         </div>
       </div>
       <div id="content" class="sub_container">
+        <script>localStorage.content_id = 1</script>
         <div id="content_switch">
-          <button><i class="fa-solid fa-chevron-left info_icons"></i></button>
-          <h1>ITEM</h1>
-          <button><i class="fa-solid fa-chevron-right info_icons"></i></button>
+          <button id="left_content_switch"><i class="fa-solid fa-chevron-left info_icons"></i></button>
+          <h1 id="content_title">ITEM</h1>
+          <button id="right_content_switch"><i class="fa-solid fa-chevron-right info_icons"></i></button>
         </div>
         <div id="projects">
-          here are some projects i've worked on
+          This block is WIP! Will contain cool projects I've worked/am working on.
         </div>
-        <div id="photographs">
-          this side of the page is WIP!
+        <div id="photography">
+          This block is WIP! Will contain photographs I'm proud of.
         </div>
-        <script>document.getElementById('projects').style.display = 'none'</script>
+        <script>
+          document.getElementById('left_content_switch').onclick = function() { cycle_content(0) }
+          document.getElementById('right_content_switch').onclick = function() { cycle_content(1) }
+          cycle_content(0);
+        </script>
       </div>
     </div>
   </body>

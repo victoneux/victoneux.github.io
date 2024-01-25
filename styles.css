@@ -107,7 +107,7 @@ body {
     font-size: 200%;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1150px) {
     .container {
         flex-direction: column;
         justify-content: start;
@@ -158,4 +158,9 @@ body {
 #content_switch button:hover {
     cursor: crosshair;
     font-size: 220%;
+}
+
+#content_title {
+    width: 150000px;
+    text-align: center;
 }
