@@ -139,3 +139,23 @@ body {
 #links_icons a:hover {
     color: var(--flamingo);
 }
+
+#content_switch {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#content_switch button {
+    border: none;
+    background: transparent;
+    color: var(--green);
+    font-size: 170%;
+}
+
+#content_switch button:hover {
+    cursor: crosshair;
+    font-size: 220%;
+}
