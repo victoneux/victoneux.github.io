@@ -57,25 +57,31 @@
       let object = document.getElementById(object_id);
       let length = new_text.length;
 
-      let chars = ["G"];
+      let chars = ["%", "#", "@"];
       if (i === 0) {
         object.innerHTML = '#'.repeat(length);
       }
 
       setTimeout(function() {
-        for (let z = 0; z < i; z++) {
-          object.innerHTML = object.innerHTML.substring(0,z) + new_text.substring(z,z+1) + object.innerHTML.substring(z,length);
+        let set = "";
+        for (let x = 0; x < length; x++) {
+          let char;
+          if (x <= i) {
+            char = new_text.substring(x,x+1);
+          } else {
+            char = chars[random_range(0,chars.length-1)];
+          }
+
+          set += char;
         }
-        for (let j = i; j < length; j++) {
-          object.innerHTML = object.innerHTML.substring(0,j) + chars[random_range(0,chars.length)] + object.innerHTML.substring(j,length);
-        }
+        object.innerHTML = set;
 
         console.log(object.innerHTML.length);
 
-        if (i < length) {
+        if (i < length-1) {
           fancy_text(object_id, new_text, i+1);
         }
-      }, 200);
+      }, 30);
     }
 
     function random_range(min, max) {
