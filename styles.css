@@ -107,12 +107,17 @@ body {
     font-size: 200%;
 }
 
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1500px) {
+    .container {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
     .container {
         flex-direction: column;
         justify-content: start;
-        width: 80%;
-        left: 10%;
     }
     .sub_container {
         width: 100%;
@@ -161,6 +166,6 @@ body {
 }
 
 #content_title {
-    width: 150000px;
     text-align: center;
+    flex-grow: 1;
 }
