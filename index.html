@@ -41,7 +41,8 @@
         new_id = options.length - 1;
       }
       localStorage.content_id = new_id;
-      document.getElementById('content_title').innerHTML = options[new_id];
+      // document.getElementById('content_title').innerHTML = options[new_id];
+      fancy_text('content_title', options[new_id], 0);
 
       for (let i = 0; i < options.length; i++) {
         if (i !== new_id) {
@@ -51,13 +52,42 @@
         }
       }
     }
+
+    function fancy_text(object_id, new_text, i) {
+      let object = document.getElementById(object_id);
+      let length = new_text.length;
+
+      let chars = ["G"];
+      if (i === 0) {
+        object.innerHTML = '#'.repeat(length);
+      }
+
+      setTimeout(function() {
+        for (let z = 0; z < i; z++) {
+          object.innerHTML = object.innerHTML.substring(0,z) + new_text.substring(z,z+1) + object.innerHTML.substring(z,length);
+        }
+        for (let j = i; j < length; j++) {
+          object.innerHTML = object.innerHTML.substring(0,j) + chars[random_range(0,chars.length)] + object.innerHTML.substring(j,length);
+        }
+
+        console.log(object.innerHTML.length);
+
+        if (i < length) {
+          fancy_text(object_id, new_text, i+1);
+        }
+      }, 200);
+    }
+
+    function random_range(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
   </script>
 </head>
   <body>
     <div class="container">
       <div id="personal_info" class="sub_container">
         <div id="name_badge">
-          <img src="https://i.imgur.com/4fWLwTT.png" id="pfp_image" height=100% width=height>
+          <img src="https://i.imgur.com/4fWLwTT.png" id="pfp_image" height=100% width=height alt="">
           <section id="name_title_text">
             <h1>victoneux</h1>
             <p id="name_subtext">a random internet boyo</p>

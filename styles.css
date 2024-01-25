@@ -52,9 +52,6 @@ body {
 }
 
 .container {
-    height: 100%;
-    position: absolute;
-    top: 0;
     background-color: transparent;
     justify-content: space-evenly;
     display: flex;
@@ -109,6 +106,7 @@ body {
     body {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
     .container {
         position: relative;
@@ -118,6 +116,8 @@ body {
 
 @media only screen and (max-width: 1200px) {
     .container {
+        position: absolute;
+        top: 0;
         flex-direction: column;
         justify-content: start;
         width: 80%;
