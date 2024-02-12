@@ -27,7 +27,7 @@
     }
 
     function cycle_content(direction) {
-      let options = ['photography', 'projects'];
+      let options = ['photography', 'projects', 'art'];
       let new_id = localStorage.content_id;
       if (direction === 0) {
         new_id--;
@@ -155,6 +155,9 @@
         </div>
         <div id="photography">
           <p>This block is WIP! Will contain photographs I'm proud of.</p>
+        </div>
+        <div id="art">
+          <p>This block is WIP! Will contain art I've drawn.</p>
         </div>
         <script>
           document.getElementById('left_content_switch').onclick = function() { cycle_content(0) }
