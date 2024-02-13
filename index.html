@@ -5,7 +5,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/05be29d559.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <meta charset="UTF-8">
@@ -27,7 +26,7 @@
     }
 
     function cycle_content(direction) {
-      let options = ['photography', 'projects', 'art'];
+      let options = ['photography', 'projects'];
       let new_id = localStorage.content_id;
       if (direction === 0) {
         new_id--;
@@ -48,7 +47,7 @@
         if (i !== new_id) {
           document.getElementById(options[i]).style.display = 'none';
         } else {
-          document.getElementById(options[new_id]).style.display = 'initial';
+          document.getElementById(options[new_id]).style.display = 'flex';
         }
       }
     }
@@ -107,7 +106,7 @@
     <div class="container">
       <div id="personal_info" class="sub_container">
         <div id="name_badge">
-          <img src="https://i.imgur.com/We1t6oE.jpeg" id="pfp_image" height=100% width=height alt="">
+          <img src="https://i.imgur.com/4fWLwTT.png" id="pfp_image" height=100% width=height alt="">
           <section id="name_title_text">
             <h1>victoneux</h1>
             <p id="name_subtext">a random internet boyo</p>
@@ -116,9 +115,9 @@
         </div>
 
         <div id="general_info" class="personal_info_container">
-          <p><i class="fa-solid fa-location-pin info_icons"></i> daytona beach, fl</p>
-          <p><i class="fa-solid fa-palette info_icons"></i> entp-a</p>
-          <p id="age"><i class="fa-solid fa-calendar info_icons"></i> </p><script>calculate_age()</script>
+          <p><i class="nf nf-fa-location_arrow"></i> daytona beach, fl</p>
+          <p><i class="nf nf-md-lightbulb"></i> entp-a</p>
+          <p id="age"><i class="nf nf-fa-calendar_o"></i> </p><script>calculate_age()</script>
         </div>
 
         <div id="description" class="personal_info_container">
@@ -134,31 +133,38 @@
         <div id="links" class="personal_info_container">
           <p>here's some links</p>
           <div id="links_icons">
-            <p><a href="https://discordapp.com/users/742193269655601272"><i class="fa-brands fa-discord"></i></a></p>
-            <p><a href="https://t.me/victoneux"><i class="fa-brands fa-telegram"></i></a></p>
-            <p><a href="https://twitter.com/Victoneux"><i class="fa-brands fa-twitter"></i></a></p>
-            <p><a href="mailto:boi@victoneux.gay"><i class="fa-solid fa-envelope"></i></a></p>
-            <p><a href="https://steamcommunity.com/id/victoneux/"><i class="fa-brands fa-steam"></i></a></p>
-            <p><a href="https://www.deviantart.com/victoneux"><i class="fa-brands fa-deviantart"></i></a></p>
+            <p><a href="https://discordapp.com/users/742193269655601272"><i class="nf nf-md-discord"></i></a></p>
+            <p><a href="https://t.me/victoneux"><i class="nf nf-fa-telegram"></i></a></p>
+            <p><a href="https://twitter.com/Victoneux"><i class="nf nf-cod-twitter"></i></a></p>
+            <p><a href="mailto:boi@victoneux.gay"><i class="nf nf-oct-mail"></i></a></p>
+            <p><a href="https://steamcommunity.com/id/victoneux/"><i class="nf nf-fa-steam"></i></a></p>
+            <p><a href="https://www.deviantart.com/victoneux"><i class="nf nf-fa-deviantart"></i></a></p>
           </div>
         </div>
       </div>
       <div id="content" class="sub_container">
         <script>localStorage.content_id = 1</script>
         <div id="content_switch">
-          <button id="left_content_switch"><i class="fa-solid fa-chevron-left info_icons"></i></button>
+          <button id="left_content_switch"><i class="nf nf-cod-chevron_left info_icons"></i></button>
           <h1 id="content_title">ITEM</h1>
-          <button id="right_content_switch"><i class="fa-solid fa-chevron-right info_icons"></i></button>
+          <button id="right_content_switch"><i class="nf nf-cod-chevron_right info_icons"></i></button>
         </div>
-        <div id="projects">
+        <div id="projects" class="image_container">
           <p>This block is WIP! Will contain cool projects I've worked/am working on.</p>
         </div>
-        <div id="photography">
-          <p>This block is WIP! Will contain photographs I'm proud of.</p>
+        <div id="photography" class="image_container">
+          <a href="https://www.deviantart.com/victoneux/gallery/90518013/photography">Full Gallery <i class="nf nf-fa-camera"></i></a>
         </div>
-        <div id="art">
-          <p>This block is WIP! Will contain art I've drawn.</p>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <div id="art" class="image_container">
+          <a href="https://www.deviantart.com/victoneux/gallery/90518019/art">Full Gallery <i class="nf nf-fa-paint_brush"></i></a>
+          <img alt="" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e716d5cb-9459-4e9a-bff4-37d4275fb490/dgvf7i4-f966a52f-8eb0-4073-b17c-b4e590369659.png/v1/fill/w_1192,h_670,q_70,strp/howdy_by_victoneux_dgvf7i4-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvZTcxNmQ1Y2ItOTQ1OS00ZTlhLWJmZjQtMzdkNDI3NWZiNDkwXC9kZ3ZmN2k0LWY5NjZhNTJmLThlYjAtNDA3My1iMTdjLWI0ZTU5MDM2OTY1OS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.U_HfSg0i5P1gQuW-63CQMMPkyNj4vs8NmsFf0NnIIME">
         </div>
+=======
+>>>>>>> parent of a667b7f (add art section)
+=======
+>>>>>>> parent of a667b7f (add art section)
         <script>
           document.getElementById('left_content_switch').onclick = function() { cycle_content(0) }
           document.getElementById('right_content_switch').onclick = function() { cycle_content(1) }
